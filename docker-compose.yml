@@ -1,0 +1,53 @@
+version: "2"
+services:
+  nginx:
+      container_name: nginx
+      build: ./docker/nginx/
+      ports:
+          - 80:80
+      depends_on:
+          - php
+      volumes_from:
+          - app
+
+  php:
+      container_name: php
+      build: ./docker/php/
+      expose:
+          - 9000
+      depends_on:
+          - mysql
+      volumes_from:
+          - app
+  app:
+      container_name: app
+      image: php:7.0-fpm
+      command: "true"
+
+  mysql:
+      container_name: mysql
+      build: ./docker/mysql/
+      ports:
+          - 3306:3306
+      volumes_from:
+          - data
+  data:
+      container_name: data
+      image: mysql:latest
+      command: "true"
+
+  phpmyadmin:
+      container_name: phpmyadmin
+      image: phpmyadmin/phpmyadmin
+      ports:
+          - 8080:80
+      depends_on:
+          - mysql
+      environment:
+          PMA_HOST: mysql
+
+  composer:
+      image: composer/composer
+      volumes_from:
+          - php
+      working_dir: /var/www/html

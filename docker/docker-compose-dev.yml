@@ -1,0 +1,14 @@
+version: "2"
+services:
+  app:
+      volumes:
+         - .:/var/www/html:rw
+  data:
+      volumes:
+         - ./docker/data:/var/lib/mysql
+  mysql:
+      environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: hutch
+          MYSQL_USER: hutch
+          MYSQL_PASSWORD: hutch

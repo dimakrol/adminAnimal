@@ -1,0 +1,35 @@
+options:
+  compose-file-path: 'docker-compose.yml'
+  compose-dev-file-path: 'docker-compose-dev.yml'
+  unison_image: 'eugenmayer/unison'
+
+syncs:
+  app-sync:
+    src: '.'
+    dest: '/var/www/html'
+    sync_strategy: 'unison'
+    # when a port of a container is exposed, on which IP does it get exposed. Localhost for docker for mac, something else for docker-machine
+    sync_host_ip: '127.0.0.1'
+
+    # should be a unique port this sync instance uses on the host to offer the rsync service on
+    sync_host_port: 10871
+
+    # optional, use this to map the files to a specific user on sync. Helps fixing permissions. You can use names and uids
+    sync_user: 'eugene'
+
+    # optional, a list of excludes for rsync - see rsync docs for details
+    sync_excludes: ['Gemfile.lock', 'Gemfile', 'config.rb', '.sass-cache/', 'sass/', 'sass-cache/', 'composer.json' , 'bower.json', 'package.json', 'Gruntfile*', 'bower_components/', 'node_modules/', '.gitignore', '.git/', '*.coffee', '*.scss', '*.sass']
+
+
+  data-sync:
+    src: './docker/data'
+    dest: '/var/lib/mysql'
+    sync_strategy: 'unison'
+    # when a port of a container is exposed, on which IP does it get exposed. Localhost for docker for mac, something else for docker-machine
+    sync_host_ip: '127.0.0.1'
+
+    # should be a unique port this sync instance uses on the host to offer the rsync service on
+    sync_host_port: 10872
+
+    # optional, use this to map the files to a specific user on sync. Helps fixing permissions. You can use names and uids
+    sync_user: 'eugene'

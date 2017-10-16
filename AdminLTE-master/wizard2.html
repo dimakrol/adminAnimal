@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HUTCH</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome 
+    <link rel="stylesheet" href="external/font-awesome.min.css">   -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+          page. However, you can choose any other skin. Make sure you
+          apply the skin class to the body tag so the changes take effect.
+    -->
+    <link rel="stylesheet" href="dist/css/skins/skin-green.min.css">
+    <link href="plugins/datepicker/datepicker3.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="custom.css">
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="skin-green sidebar-collapse">
+<div class="wrapper">
+
+    <!-- Main Header -->
+    <header class="main-header">
+
+        <!-- Logo -->
+        <a href="home.html" class="logo">
+            <!-- mini logo for sidebar mini 50x50 pixels -->
+            <span class="logo-mini"><img src="img/logo-tiny.png"></span>
+            <!-- logo for regular state and mobile devices -->
+            <span class="logo-lg"><b>HUTCH</b></span>
+        </a>
+
+        <!-- Header Navbar -->
+        <nav role="navigation" class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a role="button" data-toggle="offcanvas" class="sidebar-toggle" href="#">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+            <!-- Navbar Right Menu -->
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+
+                    <!-- Notifications Menu -->
+
+                    <!-- Tasks Menu -->
+
+                    <!-- User Account Menu -->
+
+                    <!-- Control Sidebar Toggle Button -->
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+
+
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <!-- Optionally, you can add icons to the links -->
+                <li>
+                    <a href="home.html">
+                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="treeview active">
+                    <a href="#"><i class="fa fa-venus-mars"></i> <span>Breeders</span> <i
+                            class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu menu-open" style="display: block;">
+                        <li><a data-toggle="modal" role="button" href="#new_breeder">Add New</a></li>
+                        <li><a href="breeders.html">Does</a></li>
+                        <li><a href="breeders.html">Bucks</a></li>
+                        <li><a href="#">Archive</a></li>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-th"></i> <span>Litters</span> <i
+                            class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">Add New</a></li>
+                        <li><a href="#">Archive</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="pages/schedule.html">
+                        <i class="fa fa-calendar"></i> <span>Schedule</span>
+                        <small class="label pull-right bg-red">3</small>
+                    </a>
+                </li>
+            </ul><!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div style="min-height: 528px;" class="content-wrapper">
+
+
+        <!-- Main content -->
+        <section class="content">
+
+
+            <!-- Your Page Content Here -->
+
+            <div class="row">
+
+                <div class="col-md-2 col-lg-3"></div>
+                <div class="col-md-8 col-lg-6">
+                    <div class="box box-solid bg-green-gradient">
+
+                        <!-- /.box-header -->
+                        <div class="box-body"><h2 class="text-center"><img src="img/logo-tiny.png"><br>Hutch Breeders
+                        </h2>
+
+                            <h4 class="text-center">Breeders are the production rabbits in your rabbitry</h4>
+                            <p class="text-center">Add your breeders to Hutch to begin tracking their performance<br>
+                            </p>
+                            <a href="#" class="btn btn-success btn-sm pull-right">
+                                Skip <i class="fa fa-chevron-right"></i>
+                            </a>
+
+
+                        </div>
+
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+
+
+                <!-- /.col -->
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-2 col-lg-3"></div>
+                <div class="col-md-8 col-lg-6">
+                    <div class="box box-solid bg-light-blue-gradient">
+                        <div class="box-header text-center"><h3 class="box-title">How many Breeders do you have?</h3>
+                        </div>
+                        <div class="box-body">
+
+
+                            <div class="col-md-6"><p>You can schedule breeding events, track litters, add income/expense
+                                items, and generate pedigrees for Breeders. This tool allows you to create multiple
+                                records at a time.</p>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="">Number of Breeders to add right now</label>
+                                <input name="num_breeders" class="form-control" type="text">
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-lg-3"></div>
+                <div class="col-md-8 col-lg-6">
+                    <div class="box box-solid box-primary">
+                        <div class="box-header text-center"><h3 class="box-title"><i class="fa fa-check-circle"></i>
+                            Select Breeder Fields</h3></div>
+                        <div class="box-body">
+
+
+                            <div class="row">
+                                <div class="col-md-6"><p>Select the fields you want to add to your Breeders right now.
+                                    You can fill in missing fields at a later time in Breeder Profiles.</p>
+                                    <p>Gather this information for all of your breeders. </p>
+                                </div>
+
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox"> Tattoo/ID </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Cage
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Color
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Breed
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Weight
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Photo
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Date of Birth
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Date Aquired
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Registration #
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Champion Number
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input checked="" type="checkbox">
+                                            Legs
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-solid box-primary">
+                        <div class="box-header text-center"><h3 class="box-title"><i class="fa fa-venus-mars"></i> Enter
+                            Multiple Breeders</h3></div>
+                        <div class="box-body">
+
+
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6 text-center">
+                                    <a href="#guide" data-toggle="modal" role="button" class="btn btn-info btn-lg"><i
+                                            class="fa fa-commenting"></i> Add Breeders with Guide </a><br><br>
+                                    <p class="text-center">Or enter your Breeder information in the rows below. </p>
+                                    <p class="text-center">To add a new row, click the "Add New" button. Empty rows will
+                                        be ignored.<br><br></p></div>
+                            </div>
+
+                            <div class="row row-horizon pedigree">
+                                <table class="table table-striped text-center">
+                                    <thead>
+                                    <tr>
+                                        <th class="col-xs-1">Sex</th>
+                                        <th class="col-xs-1">Name</th>
+                                        <th>Tattoo/ID</th>
+                                        <th>Cage</th>
+                                        <th>Color</th>
+                                        <th class="col-xs-1">Breed</th>
+                                        <th>Weight</th>
+                                        <th>DoB</th>
+                                        <th>Aquired</th>
+                                        <th>Reg #</th>
+                                        <th>Champ #</th>
+                                        <th>Legs</th>
+                                        <th>Photo</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn bg-maroon"><strong><i
+                                                        class="fa fa-venus"></i></strong></button>
+                                                <button type="button" class="btn btn-default"><strong><i
+                                                        class="fa fa-mars"></i></strong></button>
+
+                                            </div>
+                                        </td>
+                                        <td><input class="form-control" id="name1" placeholder="Rabbit Name"
+                                                   type="text"></td>
+                                        <td><input class="form-control" id="id1" placeholder="1234" type="text"></td>
+                                        <td><input class="form-control" id="cage1" placeholder="12" type="text"></td>
+                                        <td><input class="form-control" id="color1" placeholder="White" type="text">
+                                        </td>
+                                        <td><input class="form-control" id="breed1" placeholder="New Zealand"
+                                                   type="text"></td>
+                                        <td><input class="form-control" id="weight1" placeholder="12" type="text"></td>
+                                        <td>
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </td>
+
+                                        <td><input class="form-control" id="reg1" placeholder="1234" type="text"></td>
+                                        <td><input class="form-control" id="champ1" placeholder="12" type="text"></td>
+                                        <td><input class="form-control" id="legs1" placeholder="4" type="text"></td>
+                                        <td><input name="file" class="cloudinary_fileupload" alt="294804" type="file">
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-default"><strong><i
+                                                        class="fa fa-venus"></i></strong></button>
+                                                <button type="button" class="btn bg-blue "><strong><i
+                                                        class="fa fa-mars"></i></strong></button>
+
+                                            </div>
+                                        </td>
+                                        <td><input class="form-control" id="name1" placeholder="Rabbit Name"
+                                                   type="text"></td>
+                                        <td><input class="form-control" id="id1" placeholder="1234" type="text"></td>
+                                        <td><input class="form-control" id="cage1" placeholder="12" type="text"></td>
+                                        <td><input class="form-control" id="color1" placeholder="White" type="text">
+                                        </td>
+                                        <td><input class="form-control" id="breed1" placeholder="New Zealand"
+                                                   type="text"></td>
+                                        <td><input class="form-control" id="weight1" placeholder="12" type="text"></td>
+                                        <td>
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </td>
+
+                                        <td><input class="form-control" id="reg1" placeholder="1234" type="text"></td>
+                                        <td><input class="form-control" id="champ1" placeholder="12" type="text"></td>
+                                        <td><input class="form-control" id="legs1" placeholder="4" type="text"></td>
+                                        <td><input name="file" class="cloudinary_fileupload" alt="294804" type="file">
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn bg-maroon"><strong><i
+                                                        class="fa fa-venus"></i></strong></button>
+                                                <button type="button" class="btn btn-default"><strong><i
+                                                        class="fa fa-mars"></i></strong></button>
+
+                                            </div>
+                                        </td>
+                                        <td><input class="form-control" id="name1" placeholder="Rabbit Name"
+                                                   type="text"></td>
+                                        <td><input class="form-control" id="id1" placeholder="1234" type="text"></td>
+                                        <td><input class="form-control" id="cage1" placeholder="12" type="text"></td>
+                                        <td><input class="form-control" id="color1" placeholder="White" type="text">
+                                        </td>
+                                        <td><input class="form-control" id="breed1" placeholder="New Zealand"
+                                                   type="text"></td>
+                                        <td><input class="form-control" id="weight1" placeholder="12" type="text"></td>
+                                        <td>
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </td>
+
+                                        <td><input class="form-control" id="reg1" placeholder="1234" type="text"></td>
+                                        <td><input class="form-control" id="champ1" placeholder="12" type="text"></td>
+                                        <td><input class="form-control" id="legs1" placeholder="4" type="text"></td>
+                                        <td><input name="file" class="cloudinary_fileupload" alt="294804" type="file">
+                                        </td>
+
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            <button class="btn btn-submit btn-default pull-left" data-toggle="modal" href="#new_chain">
+                                <i class="fa fa-plus"></i> Add New Row
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <button type="button" class="btn btn-success btn-lg">Save Breeders <i
+                        class="fa fa-arrow-circle-right"></i></button>
+                <br><br>
+                <button type="button" class="btn btn-default btn-sm"> Skip <i class="fa fa-chevron-right"></i></button>
+                <br><br><br><br>
+            </div>
+            <div class="modal" id="guide" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">×</span></button>
+                            <h4 class="modal-title">Add Breeder</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal row-paddings-compensation">
+
+                                <div class="row">
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-xs-4 control-label">Sex</label>
+                                        <div class="col-xs-8">
+                                            <div class="icheck-group">
+                                                <div class="iradio_square-red checked" style="position: relative;"
+                                                     aria-checked="false" aria-disabled="false"><input name="sex"
+                                                                                                       value="doe"
+                                                                                                       id="model-sex-doe"
+                                                                                                       style="position: absolute; opacity: 0;"
+                                                                                                       type="radio">
+                                                    <ins class="iCheck-helper"
+                                                         style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                </div>
+                                                <label for="model-sex-doe" class="icheck-label"> Doe</label> <br>
+                                                <div class="iradio_square-blue" style="position: relative;"
+                                                     aria-checked="false" aria-disabled="false"><input name="sex"
+                                                                                                       value="buck"
+                                                                                                       id="model-sex-buck"
+                                                                                                       style="position: absolute; opacity: 0;"
+                                                                                                       type="radio">
+                                                    <ins class="iCheck-helper"
+                                                         style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 0px none; opacity: 0;"></ins>
+                                                </div>
+                                                <label for="model-sex-buck" class="icheck-label"> Buck</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Name</label>
+                                        <div class="col-sm-8">
+                                            <input placeholder="Enter ..." class="form-control" type="text">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">ID</label>
+                                        <div class="col-sm-8">
+                                            <span class="twitter-typeahead"
+                                                  style="position: relative; display: inline-block;"><input
+                                                    class="form-control typeahead tt-hint"
+                                                    style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                                    readonly="" autocomplete="off" spellcheck="false" tabindex="-1"
+                                                    dir="ltr" type="text"><input id="breeder-tattoo"
+                                                                                 placeholder="Enter ..."
+                                                                                 class="form-control typeahead tt-input"
+                                                                                 autocomplete="off" spellcheck="false"
+                                                                                 dir="auto"
+                                                                                 style="position: relative; vertical-align: top; background-color: transparent;"
+                                                                                 type="text"><pre aria-hidden="true"
+                                                                                                  style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Source Sans Pro&quot;,Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><div
+                                                    class="tt-menu"
+                                                    style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div
+                                                    class="tt-dataset tt-dataset-13"></div></div></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Cage</label>
+                                        <div class="col-sm-8">
+                                            <span class="twitter-typeahead"
+                                                  style="position: relative; display: inline-block;"><input
+                                                    class="form-control typeahead tt-hint"
+                                                    style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                                    readonly="" autocomplete="off" spellcheck="false" tabindex="-1"
+                                                    dir="ltr" type="text"><input id="breeder-cage"
+                                                                                 placeholder="Enter ..."
+                                                                                 class="form-control typeahead tt-input"
+                                                                                 autocomplete="off" spellcheck="false"
+                                                                                 dir="auto"
+                                                                                 style="position: relative; vertical-align: top; background-color: transparent;"
+                                                                                 type="text"><pre aria-hidden="true"
+                                                                                                  style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Source Sans Pro&quot;,Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><div
+                                                    class="tt-menu"
+                                                    style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div
+                                                    class="tt-dataset tt-dataset-12"></div></div></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Color</label>
+                                        <div class="col-sm-8">
+                                            <span class="twitter-typeahead"
+                                                  style="position: relative; display: inline-block;"><input
+                                                    class="form-control typeahead tt-hint"
+                                                    style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                                    readonly="" autocomplete="off" spellcheck="false" tabindex="-1"
+                                                    dir="ltr" type="text"><input id="breeder-color"
+                                                                                 placeholder="Enter ..."
+                                                                                 class="form-control typeahead tt-input"
+                                                                                 autocomplete="off" spellcheck="false"
+                                                                                 dir="auto"
+                                                                                 style="position: relative; vertical-align: top; background-color: transparent;"
+                                                                                 type="text"><pre aria-hidden="true"
+                                                                                                  style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Source Sans Pro&quot;,Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><div
+                                                    class="tt-menu"
+                                                    style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div
+                                                    class="tt-dataset tt-dataset-14"></div></div></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Breed</label>
+                                        <div class="col-sm-8">
+                                            <span class="twitter-typeahead"
+                                                  style="position: relative; display: inline-block;"><input
+                                                    class="form-control typeahead tt-hint"
+                                                    style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"
+                                                    readonly="" autocomplete="off" spellcheck="false" tabindex="-1"
+                                                    dir="ltr" type="text"><input id="breeder-breed"
+                                                                                 class="form-control typeahead tt-input"
+                                                                                 placeholder="Enter ..."
+                                                                                 autocomplete="off" spellcheck="false"
+                                                                                 dir="auto"
+                                                                                 style="position: relative; vertical-align: top; background-color: transparent;"
+                                                                                 type="text"><pre aria-hidden="true"
+                                                                                                  style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Source Sans Pro&quot;,Helvetica,Arial,sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: optimizelegibility; text-transform: none;"></pre><div
+                                                    class="tt-menu"
+                                                    style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;"><div
+                                                    class="tt-dataset tt-dataset-11"></div></div></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Weight</label>
+
+                                        <div class="col-sm-8">
+                                            <div>
+                                                <div class="input-group"><input min="0" pattern="d*"
+                                                                                class="form-control" type="number"><span
+                                                        class="input-group-btn" style="width:0px;"></span><input min="0"
+                                                                                                                 class="form-control"
+                                                                                                                 type="number">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-xs-7 col-sm-6">
+                                        <label class="col-sm-4 control-label">Born</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-xs-7 col-sm-6">
+                                        <label class="col-sm-4 control-label">Aquired</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group date">
+                                                <input class="form-control" type="text">
+                                                <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-th"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Reg #</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input id="pedigree-registration_number" class="form-control"
+                                                       type="text">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Champ #</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input id="pedigree-champion_number" class="form-control" type="text">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-6 col-xs-7">
+                                        <label class="col-sm-4 control-label">Legs</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <input id="pedigree-legs" class="form-control" type="text">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="form-group col-sm-12">
+                                        <label class="col-sm-2 col-xs-3 control-label">Photo</label>
+                                        <div class="col-sm-3 col-xs-5">
+
+
+                                            <img class="img-responsive img-circle profile-user-img"
+                                                 src="https://htch.us/media/breeders/default.jpg">
+
+                                        </div>
+                                        <div class="col-sm-7 pull-right">
+                                            <input name="file" alt="" class="cloudinary_fileupload" type="file">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer bg-success">
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default"><i class="fa fa-fw fa-arrow-circle-left"></i>
+                                Previous
+                            </button>
+                            <button type="button" class="btn btn-success btn-lg">Next <i
+                                    class="fa fa-fw fa-arrow-circle-right"></i></button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+
+
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+            Animal Managment Systems
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2015 <a href="#">BarnTrax</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active"><a data-toggle="tab" href="#control-sidebar-home-tab"><i class="fa fa-home"></i></a></li>
+            <li><a data-toggle="tab" href="#control-sidebar-settings-tab"><i class="fa fa-gears"></i></a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div id="control-sidebar-home-tab" class="tab-pane active">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul><!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript::;">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+                            <div class="progress progress-xxs">
+                                <div style="width: 70%" class="progress-bar progress-bar-danger"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul><!-- /.control-sidebar-menu -->
+
+            </div><!-- /.tab-pane -->
+            <!-- Stats tab content -->
+            <div id="control-sidebar-stats-tab" class="tab-pane">Stats Tab Content</div><!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div id="control-sidebar-settings-tab" class="tab-pane">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">General Settings</h3>
+                    <div class="form-group">
+                        <label class="control-sidebar-subheading">
+                            Report panel usage
+                            <input type="checkbox" checked="" class="pull-right">
+                        </label>
+                        <p>
+                            Some information about this general settings option
+                        </p>
+                    </div><!-- /.form-group -->
+                </form>
+            </div><!-- /.tab-pane -->
+        </div>
+    </aside><!-- /.control-sidebar -->
+    <!-- Add the sidebar's background. This div must be placed
+         immediately after the control sidebar -->
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+</div><!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.1.4 -->
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/app.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+
+<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script>
+    $('.input-group.date').datepicker({
+        todayBtn: "linked",
+        autoclose: true,
+        todayHighlight: true,
+        toggleActive: true
+    });
+</script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+
+
+</body>
+</html>
